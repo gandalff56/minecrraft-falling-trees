@@ -24,9 +24,9 @@
         }
     },
     {
-        "condition": "inverted",
+        "condition": "minecraft:inverted",
         "term": {
-            "condition": "location_check",
+            "condition": "minecraft:location_check",
             "offsetY": -1,
             "predicate": {
                 "block": {

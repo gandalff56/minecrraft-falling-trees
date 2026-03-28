@@ -100,12 +100,5 @@
                 }
             }
         ]
-    },
-    {
-        "condition": "entity_properties",
-        "entity": "this",
-        "predicate": {
-            "nbt": "{Age:0s,OnGround:0b}"
-        }
     }
 ]
