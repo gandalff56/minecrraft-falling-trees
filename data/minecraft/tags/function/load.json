@@ -1,5 +1,6 @@
 {
   "values": [
-    "physics_of_falling_trees:load"
+    "physics_of_falling_trees:load",
+    "hardcore_rpg:load"
   ]
 }
