@@ -7,7 +7,7 @@ execute unless score #rpg.dragon_phase rpg.temp matches 30.. in minecraft:the_en
 execute unless score #rpg.dragon_phase rpg.temp matches 30.. run scoreboard players set #rpg.dragon_phase rpg.temp 30
 
 # Spawn 2 endermen each tick cycle (much more aggressive)
-execute in minecraft:the_end as @a[scores={rpg.level=1..},limit=1,sort=random] at @s run summon minecraft:enderman ~4 ~ ~4 {CustomName:'{"text":"Strażnik Smoka","color":"dark_purple","italic":true}',Tags:["hrpg.dragon_minion","hrpg.scaled","hrpg.elite_checked"]}
+execute in minecraft:the_end as @a[scores={rpg.level=1..},limit=1,sort=random] at @s run summon minecraft:enderman ~4 ~ ~4 {custom_name:{"text":"Straznik Smoka","color":"dark_purple","italic":true},Tags:["hrpg.dragon_minion","hrpg.scaled","hrpg.elite_checked"]}
 execute if predicate hardcore_rpg:boss_summon_chance in minecraft:the_end as @a[scores={rpg.level=1..},limit=1,sort=random] at @s run summon minecraft:enderman ~-3 ~ ~3 {Tags:["hrpg.dragon_minion","hrpg.scaled","hrpg.elite_checked"]}
 
 # Dragon breath clouds more frequently

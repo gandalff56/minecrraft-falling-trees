@@ -4,7 +4,7 @@ scoreboard players set #rpg.dragon_active rpg.temp 1
 scoreboard players set #rpg.dragon_phase rpg.temp 1
 
 # Buff the dragon — custom name and massive HP boost
-execute in minecraft:the_end as @e[type=minecraft:ender_dragon,limit=1] run data merge entity @s {CustomName:'{"text":"🐉 Smok Apokalipsy","color":"dark_red","bold":true}',CustomNameVisible:1b}
+execute in minecraft:the_end as @e[type=minecraft:ender_dragon,limit=1] run data merge entity @s {custom_name:{"text":"Smok Apokalipsy","color":"dark_red","bold":true},custom_name_visible:1b}
 
 # Dragon HP: set to 2000 (default is 200, this is 10x)
 execute in minecraft:the_end as @e[type=minecraft:ender_dragon,limit=1] run attribute @s minecraft:max_health base set 2000

@@ -2,7 +2,7 @@
 # Called every 40 ticks from tick.mcfunction
 
 # Zombie King: summon reinforcement every ~10 seconds (200 ticks, checked every 40)
-execute as @e[type=minecraft:zombie,tag=hrpg.boss_zombie] at @s if predicate hardcore_rpg:boss_summon_chance run summon minecraft:zombie ~ ~ ~ {CustomName:'{"text":"Sługus Zombie","color":"gray","italic":true}',Tags:["hrpg.scaled","hrpg.elite_checked","hrpg.mature"]}
+execute as @e[type=minecraft:zombie,tag=hrpg.boss_zombie] at @s if predicate hardcore_rpg:boss_summon_chance run summon minecraft:zombie ~ ~ ~ {custom_name:{"text":"Slugus Zombie","color":"gray","italic":true},Tags:["hrpg.scaled","hrpg.elite_checked","hrpg.mature"]}
 execute as @e[type=minecraft:zombie,tag=hrpg.boss_zombie] at @s if predicate hardcore_rpg:boss_summon_chance run particle minecraft:soul ~ ~1 ~ 0.5 0.5 0.5 0.05 5
 
 # Skeleton Sniper: shoot extra fire arrows at nearest player

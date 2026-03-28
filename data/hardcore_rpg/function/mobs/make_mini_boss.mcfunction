@@ -14,23 +14,23 @@ execute store result storage hardcore_rpg:temp hp int 1 run scoreboard players g
 function hardcore_rpg:mobs/apply_elite_hp with storage hardcore_rpg:temp
 
 # Custom names + type-specific tags
-data merge entity @s {CustomNameVisible:1b}
+data merge entity @s {custom_name_visible:1b}
 
 # Zombie → Zombie King (summons reinforcements)
 execute if entity @s[type=minecraft:zombie] run tag @s add hrpg.boss_zombie
-execute if entity @s[type=minecraft:zombie] run data merge entity @s {CustomName:'{"text":"👑 Zombie King","color":"dark_red","bold":true}'}
+execute if entity @s[type=minecraft:zombie] run data merge entity @s {custom_name:{"text":"Zombie King","color":"dark_red","bold":true}}
 
 # Skeleton → Skeleton Sniper (fire arrows, faster)
 execute if entity @s[type=minecraft:skeleton] run tag @s add hrpg.boss_skeleton
-execute if entity @s[type=minecraft:skeleton] run data merge entity @s {CustomName:'{"text":"💀 Skeleton Sniper","color":"dark_purple","bold":true}'}
+execute if entity @s[type=minecraft:skeleton] run data merge entity @s {custom_name:{"text":"Skeleton Sniper","color":"dark_purple","bold":true}}
 execute if entity @s[type=minecraft:skeleton] run effect give @s minecraft:speed 999999 1 true
 
 # Creeper → Creeper Lord (bigger explosion, poison)
 execute if entity @s[type=minecraft:creeper] run tag @s add hrpg.boss_creeper
-execute if entity @s[type=minecraft:creeper] run data merge entity @s {CustomName:'{"text":"💣 Creeper Lord","color":"dark_green","bold":true}',ExplosionRadius:6b,Fuse:20s}
+execute if entity @s[type=minecraft:creeper] run data merge entity @s {custom_name:{"text":"Creeper Lord","color":"dark_green","bold":true},ExplosionRadius:6b,Fuse:20s}
 
 # Generic boss for other types
-execute unless entity @s[type=minecraft:zombie] unless entity @s[type=minecraft:skeleton] unless entity @s[type=minecraft:creeper] run data merge entity @s {CustomName:'{"text":"👑 Mini-Boss","color":"dark_red","bold":true}'}
+execute unless entity @s[type=minecraft:zombie] unless entity @s[type=minecraft:skeleton] unless entity @s[type=minecraft:creeper] run data merge entity @s {custom_name:{"text":"Mini-Boss","color":"dark_red","bold":true}}
 
 # Particles
 particle minecraft:soul_fire_flame ~ ~1 ~ 0.5 0.5 0.5 0.02 20
