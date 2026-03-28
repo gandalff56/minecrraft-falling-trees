@@ -1,10 +1,6 @@
 # Send TPA request to player with matching ID
 # @s = requester, tpa.request = target's ID
 
-# Cooldown check (60s = 1200 ticks)
-execute if score @s tpa.cooldown matches 1.. run tellraw @s [{"text":"[TPA] ","color":"red"},{"text":"Musisz poczekac przed kolejnym TPA!","color":"gray"}]
-execute if score @s tpa.cooldown matches 1.. run return 0
-
 # Don't TPA to yourself
 execute store result score #tpa.check tpa.id run scoreboard players get @s tpa.request
 execute if score @s tpa.id = #tpa.check tpa.id run tellraw @s [{"text":"[TPA] ","color":"red"},{"text":"Nie mozesz teleportowac sie do siebie!","color":"gray"}]
