@@ -18,6 +18,10 @@ execute as @a[scores={rpg.class=1..4,rpg.wand_use=1..}] run function hardcore_rp
 # Wand system: prevent dropping (every tick)
 execute as @a[scores={rpg.class=1..4}] run function hardcore_rpg:wand/check_drop
 
+# Guide book: prevent dropping
+execute as @a at @s as @e[type=item,distance=..5,nbt={Item:{id:"minecraft:written_book"}}] run kill @s
+execute as @a unless items entity @s container.* minecraft:written_book unless items entity @s weapon minecraft:written_book unless items entity @s weapon.offhand minecraft:written_book run function hardcore_rpg:player/give_book
+
 # Tick abilities for classed players (passives only — actives moved to wand)
 execute as @a[scores={rpg.class=1..4}] run function hardcore_rpg:abilities/tick
 
