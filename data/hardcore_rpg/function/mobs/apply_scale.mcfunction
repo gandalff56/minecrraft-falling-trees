@@ -29,3 +29,6 @@ execute if entity @p[scores={rpg.level=30..},distance=..48] run attribute @s min
 execute if entity @p[scores={rpg.level=30..},distance=..48] run data merge entity @s {Health:32f}
 execute if entity @p[scores={rpg.level=30..},distance=..48] run effect give @s minecraft:speed 999999 0 true
 execute if entity @p[scores={rpg.level=30..},distance=..48] run effect give @s minecraft:strength 999999 0 true
+
+# Assign special abilities based on player level
+function hardcore_rpg:mobs/assign_abilities

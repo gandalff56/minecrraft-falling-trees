@@ -1,5 +1,8 @@
 # === WARRIOR ABILITIES ===
 
+# Shield: only warriors can block, nerfed with cooldown
+execute as @a[scores={rpg.class=1}] run function hardcore_rpg:abilities/warrior/shield_tick
+
 # Berserker: Strength when below 4 HP (level 5+)
 execute as @a[scores={rpg.class=1,rpg.level=5..}] run function hardcore_rpg:abilities/warrior/berserker
 

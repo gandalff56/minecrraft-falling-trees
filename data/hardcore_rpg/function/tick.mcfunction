@@ -24,6 +24,7 @@ execute as @a[scores={rpg.cd_arrow_rain=1..}] run scoreboard players remove @s r
 execute as @a[scores={rpg.cd_trap=1..}] run scoreboard players remove @s rpg.cd_trap 1
 execute as @a[scores={rpg.cd_war_cry=1..}] run scoreboard players remove @s rpg.cd_war_cry 1
 execute as @a[scores={rpg.cd_ground_slam=1..}] run scoreboard players remove @s rpg.cd_ground_slam 1
+execute as @a[scores={rpg.cd_shield=1..}] run scoreboard players remove @s rpg.cd_shield 1
 
 # Actionbar UI (every 10 ticks)
 execute if score #rpg.ui_tick rpg.temp matches 10.. run scoreboard players set #rpg.ui_tick rpg.temp 0
@@ -39,6 +40,9 @@ scoreboard players add #rpg.craft_tick rpg.temp 1
 execute as @e[type=#hardcore_rpg:hostile_mobs,tag=!hrpg.mature] run scoreboard players add @s rpg.mob_age 1
 execute as @e[type=#hardcore_rpg:hostile_mobs,tag=!hrpg.mature,scores={rpg.mob_age=160..}] run tag @s add hrpg.mature
 
+# Elite/Mini-Boss check (when mob_age = 2, just spawned)
+execute as @e[type=#hardcore_rpg:hostile_mobs,tag=!hrpg.elite_checked,scores={rpg.mob_age=2}] at @s run function hardcore_rpg:mobs/check_elite
+
 # Kill rate reset (every 1200 ticks = 60 seconds)
 execute if score #rpg.killrate_tick rpg.temp matches 1200.. run scoreboard players set #rpg.killrate_tick rpg.temp 0
 execute if score #rpg.killrate_tick rpg.temp matches 0 as @a run scoreboard players set @s rpg.killrate 0
@@ -47,4 +51,7 @@ scoreboard players add #rpg.killrate_tick rpg.temp 1
 # Mob scaling (every 40 ticks)
 execute if score #rpg.mob_tick rpg.temp matches 40.. run scoreboard players set #rpg.mob_tick rpg.temp 0
 execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/scale
+execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/boss_tick
+execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/ability_tick
+execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/blood_moon_check
 scoreboard players add #rpg.mob_tick rpg.temp 1
