@@ -20,6 +20,10 @@ execute as @a[scores={rpg.cd_undying=1..}] run scoreboard players remove @s rpg.
 execute as @a[scores={rpg.cd_fireball=1..}] run scoreboard players remove @s rpg.cd_fireball 1
 execute as @a[scores={rpg.cd_lightning=1..}] run scoreboard players remove @s rpg.cd_lightning 1
 execute as @a[scores={rpg.cd_teleport=1..}] run scoreboard players remove @s rpg.cd_teleport 1
+execute as @a[scores={rpg.cd_arrow_rain=1..}] run scoreboard players remove @s rpg.cd_arrow_rain 1
+execute as @a[scores={rpg.cd_trap=1..}] run scoreboard players remove @s rpg.cd_trap 1
+execute as @a[scores={rpg.cd_war_cry=1..}] run scoreboard players remove @s rpg.cd_war_cry 1
+execute as @a[scores={rpg.cd_ground_slam=1..}] run scoreboard players remove @s rpg.cd_ground_slam 1
 
 # Actionbar UI (every 10 ticks)
 execute if score #rpg.ui_tick rpg.temp matches 10.. run scoreboard players set #rpg.ui_tick rpg.temp 0

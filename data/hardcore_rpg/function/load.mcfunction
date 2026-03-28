@@ -15,6 +15,10 @@ scoreboard objectives add rpg.health dummy
 scoreboard objectives add rpg.trigger trigger
 scoreboard objectives add rpg.temp dummy
 scoreboard objectives add rpg.xp_grant dummy
+scoreboard objectives add rpg.cd_arrow_rain dummy
+scoreboard objectives add rpg.cd_trap dummy
+scoreboard objectives add rpg.cd_war_cry dummy
+scoreboard objectives add rpg.cd_ground_slam dummy
 scoreboard objectives add rpg.killrate dummy
 scoreboard objectives add rpg.mob_age dummy
 
