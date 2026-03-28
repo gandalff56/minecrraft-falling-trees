@@ -1,0 +1,37 @@
+{
+  "values": [
+    "#midwut:fluids/all",
+    "#midwut:air",
+    "#minecraft:flowers",
+    "#minecraft:crops",
+    "minecraft:dead_bush",
+    "#midwut:natura/coral/dead/plants",
+    "#midwut:natura/coral/alive/plants",
+    "#minecraft:flower_pots",
+    {
+      "required": false,
+      "id": "minecraft:bush"
+    },
+    {
+      "required": false,
+      "id": "#midwut:natura/dry_grass"
+    },
+    "#midwut:natura/grass",
+    "#midwut:natura/seagrass",
+    "#midwut:natura/plants",
+    "#minecraft:saplings",
+    "#minecraft:bee_growables",
+    "#midwut:natura/fern",
+    "minecraft:cobweb",
+    "minecraft:snow",
+    {
+      "required": false,
+      "id": "minecraft:resin_clump"
+    },
+    "minecraft:sculk_vein",
+    {
+      "required": false,
+      "id": "minecraft:leaf_litter"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+    "pack": {
+        "description": "§2Cut down all trees!§r v2.5.0\n1.21.9–26.1 by §6Antoha256M  ",
+        "min_format": [ 82, 0 ],
+        "max_format": [ 101, 1 ]
+    },
+    "overlays": {
+        "entries": [
+            {
+                "min_format": [ 94, 0 ],
+                "max_format": [ 101, 1 ],
+                "directory": "format_94"
+            }
+        ]
+    }
+}
