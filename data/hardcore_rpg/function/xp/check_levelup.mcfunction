@@ -7,7 +7,7 @@ scoreboard players operation @s rpg.xp -= @s rpg.xp_needed
 scoreboard players add @s rpg.level 1
 
 # Calculate new XP needed: (level + 1) * 100
-scoreboard players operation @s rpg.xp_needed = @s rpg.level rpg.level
+scoreboard players operation @s rpg.xp_needed = @s rpg.level
 scoreboard players add @s rpg.xp_needed 1
 scoreboard players operation @s rpg.xp_needed *= #100 rpg.temp
 
