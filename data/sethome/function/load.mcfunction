@@ -7,4 +7,12 @@ scoreboard objectives add home.z dummy
 scoreboard objectives add home.has_home dummy
 scoreboard objectives add home.dim dummy
 
-tellraw @a {"text":"[Home] Zaladowano! /trigger home.set = zapisz, /trigger home.trigger = teleportuj","color":"green"}
+# TPA system
+scoreboard objectives add tpa.request trigger
+scoreboard objectives add tpa.accept trigger
+scoreboard objectives add tpa.id dummy
+scoreboard objectives add tpa.from dummy
+scoreboard objectives add tpa.timeout dummy
+scoreboard players add #tpa.next_id tpa.id 0
+
+tellraw @a {"text":"[Home/TPA] Zaladowano!","color":"green"}
