@@ -1,0 +1,38 @@
+[
+    {
+        "condition": "minecraft:entity_scores",
+        "entity": "this",
+        "scores": {
+            "poft.offset_x": {
+                "min": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "#x_min_base"
+                    },
+                    "score": "main_score"
+                },
+                "max": {
+                    "type": "minecraft:score",
+                    "target": {
+                        "type": "minecraft:fixed",
+                        "name": "#x_min_base"
+                    },
+                    "score": "main_score"
+                }
+            }
+        }
+    },
+    {
+        "condition": "inverted",
+        "term": {
+            "condition": "location_check",
+            "offsetY": -1,
+            "predicate": {
+                "block": {
+                    "blocks": "#physics_of_falling_trees:air"
+                }
+            }
+        }
+    }
+]

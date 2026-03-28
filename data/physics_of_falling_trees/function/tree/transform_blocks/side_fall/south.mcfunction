@@ -1,0 +1,2 @@
+execute if entity @e[type=#physics_of_falling_trees:tree_displays,tag=poft.block,tag=poft.summoned,tag=poft.base_block,tag=poft.south,tag=!poft.main_block,limit=1] run function physics_of_falling_trees:tree/transform_blocks/side_fall/south_
+tag @s add poft.south

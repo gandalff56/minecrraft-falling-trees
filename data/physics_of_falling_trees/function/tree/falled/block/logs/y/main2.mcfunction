@@ -1,0 +1,1 @@
+$setblock ~ ~ ~ $(Name)[axis=y,natural=true]

@@ -1,0 +1,2 @@
+tag @s add poft.check_item
+execute if items entity @s contents #physics_of_falling_trees:logs positioned as @s if function physics_of_falling_trees:tree/search_tree/check_sneak if predicate physics_of_falling_trees:check_oak_2 align xyz positioned ~ ~1 ~ run function physics_of_falling_trees:tree/search_tree/pre

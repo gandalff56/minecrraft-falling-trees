@@ -1,0 +1,2 @@
+execute unless block ~ ~ ~ #physics_of_falling_trees:air run function physics_of_falling_trees:tree/falling/falled_sound
+execute if function physics_of_falling_trees:tree/difficulty unless score #add_angle main_score matches -4000..4000 if entity @e[type=#physics_of_falling_trees:all_living_for_tree,distance=..5,limit=1] align xyz positioned ~0.1 ~0.1 ~0.1 as @e[type=#physics_of_falling_trees:all_living_for_tree,dx=0] positioned ~-0.2 ~-0.2 ~-0.2 if entity @s[dx=0] run function physics_of_falling_trees:tree/falling/damage with storage midwut:main macros
