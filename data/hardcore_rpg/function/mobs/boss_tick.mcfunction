@@ -11,6 +11,9 @@ execute as @e[type=minecraft:skeleton,tag=hrpg.boss_skeleton] at @s run data mer
 # Creeper Lord: poison aura (nearby players get Poison I for 3s)
 execute as @e[type=minecraft:creeper,tag=hrpg.boss_creeper] at @s run effect give @a[distance=..5] minecraft:poison 3 0
 
+# Boss class-counter AI (mini-bosses adapt to player class)
+execute as @e[tag=hrpg.mini_boss] at @s run function hardcore_rpg:mobs/boss_class_counter
+
 # Mini-boss particles
 execute as @e[tag=hrpg.mini_boss] at @s run particle minecraft:soul_fire_flame ~ ~1.5 ~ 0.3 0.3 0.3 0.01 3
 
