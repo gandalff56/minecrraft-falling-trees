@@ -26,6 +26,11 @@ execute if score #rpg.ui_tick rpg.temp matches 10.. run scoreboard players set #
 execute if score #rpg.ui_tick rpg.temp matches 0 as @a[scores={rpg.level=0..}] run function hardcore_rpg:ui/actionbar
 scoreboard players add #rpg.ui_tick rpg.temp 1
 
+# Crafting restrictions (every 20 ticks)
+execute if score #rpg.craft_tick rpg.temp matches 20.. run scoreboard players set #rpg.craft_tick rpg.temp 0
+execute if score #rpg.craft_tick rpg.temp matches 0 run function hardcore_rpg:crafting/check
+scoreboard players add #rpg.craft_tick rpg.temp 1
+
 # Mob scaling (every 40 ticks)
 execute if score #rpg.mob_tick rpg.temp matches 40.. run scoreboard players set #rpg.mob_tick rpg.temp 0
 execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/scale
