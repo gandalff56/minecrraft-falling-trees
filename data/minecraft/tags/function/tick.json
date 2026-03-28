@@ -1,6 +1,7 @@
 {
   "values": [
     "physics_of_falling_trees:tick",
-    "hardcore_rpg:tick"
+    "hardcore_rpg:tick",
+    "sethome:tick"
   ]
 }

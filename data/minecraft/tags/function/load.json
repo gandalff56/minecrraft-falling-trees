@@ -1,6 +1,7 @@
 {
   "values": [
     "physics_of_falling_trees:load",
-    "hardcore_rpg:load"
+    "hardcore_rpg:load",
+    "sethome:load"
   ]
 }
