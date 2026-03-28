@@ -8,10 +8,10 @@ execute in minecraft:the_end as @e[tag=hrpg.dragon_minion] run kill @s
 execute in minecraft:the_end as @e[tag=hrpg.dragon_breath] run kill @s
 
 # Announcement
-execute in minecraft:the_end run title @a title {"text":"ZWYCIĘSTWO!","color":"gold","bold":true}
+execute in minecraft:the_end run title @a title {"text":"ZWYCIESTWO!","color":"gold","bold":true}
 execute in minecraft:the_end run title @a subtitle {"text":"Smok Apokalipsy pokonany!","color":"yellow"}
 
-execute in minecraft:the_end run tellraw @a ["",{"text":"\n"},{"text":"═══════════════════════════════","color":"gold"},{"text":"\n"},{"text":"  🐉 SMOK APOKALIPSY POKONANY!","color":"gold","bold":true},{"text":"\n"},{"text":"  Gratulacje, bohaterowie!","color":"yellow"},{"text":"\n"},{"text":"═══════════════════════════════","color":"gold"}]
+execute in minecraft:the_end run tellraw @a ["",{"text":"\n"},{"text":"==============================","color":"gold"},{"text":"\n"},{"text":"  SMOK APOKALIPSY POKONANY!","color":"gold","bold":true},{"text":"\n"},{"text":"  Gratulacje, bohaterowie!","color":"yellow"},{"text":"\n"},{"text":"==============================","color":"gold"}]
 
 # Rewards to all players in the_end
 # Massive XP: 1000
@@ -19,10 +19,10 @@ execute in minecraft:the_end as @a[scores={rpg.class=1..4}] run scoreboard playe
 execute in minecraft:the_end as @a[scores={rpg.class=1..4}] run function hardcore_rpg:xp/check_levelup
 
 # Smocze Serce — unique trophy item
-execute in minecraft:the_end as @a[scores={rpg.class=1..4}] run give @s minecraft:nether_star[custom_name='{"text":"Smocze Serce","color":"gold","bold":true,"italic":false}',enchantment_glint_override=true,lore=['{"text":"Zdobyte po pokonaniu Smoka Apokalipsy","color":"gray","italic":true}','{"text":"Dowód odwagi i siły drużyny","color":"dark_purple","italic":true}']] 1
+execute in minecraft:the_end as @a[scores={rpg.class=1..4}] run give @s minecraft:nether_star[custom_name={"text":"Smocze Serce","color":"gold","bold":true,"italic":false},enchantment_glint_override=true,lore=[{"text":"Zdobyte po pokonaniu Smoka Apokalipsy","color":"gray","italic":true},{"text":"Dowod odwagi i sily druzyny","color":"dark_purple","italic":true}]] 1
 
 # Dragon Slayer title message
-execute in minecraft:the_end as @a[scores={rpg.class=1..4}] run tellraw @s [{"text":"Otrzymujesz tytuł: ","color":"gray"},{"text":"Pogromca Smoków","color":"gold","bold":true}]
+execute in minecraft:the_end as @a[scores={rpg.class=1..4}] run tellraw @s [{"text":"Otrzymujesz tytul: ","color":"gray"},{"text":"Pogromca Smokow","color":"gold","bold":true}]
 
 # Epic effects
 execute in minecraft:the_end run playsound minecraft:ui.toast.challenge_complete player @a ~ ~ ~ 2 1
