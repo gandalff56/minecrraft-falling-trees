@@ -1,0 +1,13 @@
+[
+    {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+            "slots": {
+                "contents": {
+                    "items": "#physics_of_falling_trees:logs"
+                }
+            }
+        }
+    }
+]

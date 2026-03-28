@@ -1,0 +1,13 @@
+{
+    "env": {
+        "feature": {
+            "hover": false,
+            "inlayHint": {
+                "enabledNodes": []
+            }
+        }
+    },
+    "lint": {
+        "idOmitDefaultNamespace": false
+    }
+}

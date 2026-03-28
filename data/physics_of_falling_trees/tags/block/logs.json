@@ -1,0 +1,9 @@
+{
+    "values": [
+        "#minecraft:logs",
+        {
+            "required": false,
+            "id": "minecraft:creaking_heart"
+        }
+    ]
+}

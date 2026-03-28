@@ -1,0 +1,7 @@
+execute if block ~ ~ ~ #physics_of_falling_trees:leaves[distance=1] run return run data modify storage midwut:main Data.block_state.Properties.distance set value "1"
+execute if block ~ ~ ~ #physics_of_falling_trees:leaves[distance=2] run return run data modify storage midwut:main Data.block_state.Properties.distance set value "2"
+execute if block ~ ~ ~ #physics_of_falling_trees:leaves[distance=3] run return run data modify storage midwut:main Data.block_state.Properties.distance set value "3"
+execute if block ~ ~ ~ #physics_of_falling_trees:leaves[distance=4] run return run data modify storage midwut:main Data.block_state.Properties.distance set value "4"
+execute if block ~ ~ ~ #physics_of_falling_trees:leaves[distance=5] run return run data modify storage midwut:main Data.block_state.Properties.distance set value "5"
+execute if block ~ ~ ~ #physics_of_falling_trees:leaves[distance=6] run return run data modify storage midwut:main Data.block_state.Properties.distance set value "6"
+execute if block ~ ~ ~ #physics_of_falling_trees:leaves[distance=7] run return run data modify storage midwut:main Data.block_state.Properties.distance set value "7"

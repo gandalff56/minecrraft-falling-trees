@@ -1,0 +1,51 @@
+{
+    "values": [
+        "#midwut:fluids/all",
+        "#midwut:air",
+        "minecraft:fire",
+        "#minecraft:flowers",
+        "#minecraft:crops",
+        "minecraft:dead_bush",
+        "#midwut:natura/coral/dead/plants",
+        "#midwut:natura/coral/alive/plants",
+        "#minecraft:flower_pots",
+        "#minecraft:climbable",
+        "#midwut:natura/plants",
+        {
+          "required": false,
+          "id": "#midwut:natura/bush"
+        },
+        {
+          "required": false,
+          "id": "#midwut:natura/dry_grass"
+        },
+        "#midwut:natura/grass",
+        "#midwut:natura/seagrass",
+        "#minecraft:saplings",
+        "#minecraft:all_signs",
+        "minecraft:pink_petals",
+        "#minecraft:bee_growables",
+        "#minecraft:buttons",
+        "minecraft:redstone_wire",
+        "#midwut:torchs/all",
+        "#minecraft:pressure_plates",
+        "minecraft:powder_snow",
+        "#minecraft:banners",
+        "minecraft:lever",
+        "#midwut:natura/fern",
+        "#minecraft:rails",
+        "minecraft:cobweb",
+        "minecraft:sculk_vein",
+        "minecraft:snow",
+        "minecraft:mangrove_roots",
+        {
+          "required": false,
+          "id": "minecraft:resin_clump"
+        },
+        "#physics_of_falling_trees:deform_blocks",
+        {
+          "required": false,
+          "id": "minecraft:leaf_litter"
+        }
+    ]
+}

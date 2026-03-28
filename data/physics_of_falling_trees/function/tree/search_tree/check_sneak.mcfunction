@@ -1,0 +1,1 @@
+return run execute as @p if predicate physics_of_falling_trees:sneak_type

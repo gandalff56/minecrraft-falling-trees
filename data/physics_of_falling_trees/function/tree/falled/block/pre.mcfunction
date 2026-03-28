@@ -1,0 +1,2 @@
+execute if entity @s[tag=poft.logs_block] run function physics_of_falling_trees:tree/falled/block/logs/pre
+execute if entity @s[tag=!poft.logs_block] run function physics_of_falling_trees:tree/falled/block/others/pre

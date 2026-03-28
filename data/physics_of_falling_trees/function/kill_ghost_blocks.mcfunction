@@ -1,0 +1,1 @@
+execute as @e[type=#physics_of_falling_trees:tree_displays,tag=!poft.main_block,tag=poft.block] run function physics_of_falling_trees:tree/kill_ghost_blocks
