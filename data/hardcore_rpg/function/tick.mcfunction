@@ -5,13 +5,20 @@ execute as @a unless score @s rpg.level matches 0.. run function hardcore_rpg:pl
 # Enable trigger for all players
 execute as @a run scoreboard players enable @s rpg.trigger
 
-# Handle class selection trigger
+# Handle class selection trigger (1-4 = class, 10 = reset)
 execute as @a[scores={rpg.trigger=1..4}] run function hardcore_rpg:class/select
+execute as @a[scores={rpg.trigger=10}] run function hardcore_rpg:class/select
 
 # Update health tracking
 execute as @a[scores={rpg.level=0..}] store result score @s rpg.health run data get entity @s Health 1
 
-# Tick abilities for classed players
+# Wand system: detect right-click cast
+execute as @a[scores={rpg.class=1..4,rpg.wand_use=1..}] run function hardcore_rpg:wand/cast
+
+# Wand system: prevent dropping (every tick)
+execute as @a[scores={rpg.class=1..4}] run function hardcore_rpg:wand/check_drop
+
+# Tick abilities for classed players (passives only — actives moved to wand)
 execute as @a[scores={rpg.class=1..4}] run function hardcore_rpg:abilities/tick
 
 # Cooldown ticking
@@ -58,4 +65,5 @@ execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs
 execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/boss_tick
 execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/ability_tick
 execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/blood_moon_check
+execute if score #rpg.mob_tick rpg.temp matches 0 if score #rpg.dragon_active rpg.temp matches 1 run function hardcore_rpg:boss/dragon_tick
 scoreboard players add #rpg.mob_tick rpg.temp 1

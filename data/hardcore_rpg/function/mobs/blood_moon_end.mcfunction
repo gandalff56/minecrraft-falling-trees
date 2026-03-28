@@ -6,7 +6,7 @@ effect clear @a minecraft:night_vision
 
 # Announce
 title @a title {"text":"☀ Świt","color":"yellow","bold":true}
-title @a subtitle {"text":"Blood Moon zakończony.","color":"gray"}
-tellraw @a ["",{"text":"☀ Blood Moon się zakończył. Przetrwaliście noc!","color":"yellow"}]
+title @a subtitle {"text":"Krwawy Księżyc zakończony.","color":"gray"}
+tellraw @a ["",{"text":"☀ Krwawy Księżyc się zakończył. Przetrwaliście noc!","color":"yellow"}]
 
 playsound minecraft:block.beacon.activate player @a ~ ~ ~ 0.8 1.5

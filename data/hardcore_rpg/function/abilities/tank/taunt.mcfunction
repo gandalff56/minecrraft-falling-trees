@@ -1,11 +1,8 @@
-# Taunt: sneak + iron ingot → force mobs to target you + Resistance I
-# Level 10+ Tank active ability
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon minecraft:iron_ingot run return 0
+# Taunt: force mobs to target you + Resistance I
+# Level 10+ Tank active ability (wand-activated)
 
 # Check cooldown (15 seconds = 300 ticks)
-execute unless score @s rpg.cd_taunt matches 0 run return 0
+execute unless score @s rpg.cd_taunt matches 0 run tellraw @s {"text":"Taunt na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_taunt 300

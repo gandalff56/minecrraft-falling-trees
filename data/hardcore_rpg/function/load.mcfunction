@@ -27,6 +27,8 @@ scoreboard objectives add rpg.cd_unbreakable dummy
 scoreboard objectives add rpg.killrate dummy
 scoreboard objectives add rpg.mob_age dummy
 scoreboard objectives add rpg.elite_kill dummy
+scoreboard objectives add rpg.ability_slot dummy
+scoreboard objectives add rpg.wand_use minecraft.used:minecraft.carrot_on_a_stick
 
 # Constants
 scoreboard players set #100 rpg.temp 100

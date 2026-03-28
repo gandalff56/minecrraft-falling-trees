@@ -1,14 +1,8 @@
-# Bulwark: sneak + shield while blocking → 3s invulnerability
-# Level 20+ Tank active ability
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon.offhand minecraft:shield run return 0
-
-# Must be blocking (using item)
-execute unless entity @s[nbt={UsingItem:{id:"minecraft:shield"}}] run return 0
+# Bulwark: 3s invulnerability
+# Level 20+ Tank active ability (wand-activated)
 
 # Check cooldown (30 seconds = 600 ticks)
-execute unless score @s rpg.cd_bulwark matches 0 run return 0
+execute unless score @s rpg.cd_bulwark matches 0 run tellraw @s {"text":"Bulwark na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_bulwark 600

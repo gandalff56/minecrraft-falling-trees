@@ -3,10 +3,10 @@ scoreboard players set #rpg.blood_moon rpg.temp 1
 scoreboard players set #rpg.days_since_bm rpg.temp 0
 
 # Announce to all players
-title @a title {"text":"🌑 BLOOD MOON","color":"dark_red","bold":true}
+title @a title {"text":"🌑 KRWAWY KSIĘŻYC","color":"dark_red","bold":true}
 title @a subtitle {"text":"Potwory są silniejsze tej nocy...","color":"red"}
 tellraw @a ["",{"text":"═══════════════════════════════","color":"dark_red"}]
-tellraw @a ["",{"text":"  🌑 BLOOD MOON! ","color":"dark_red","bold":true},{"text":"Potwory zyskują Siłę i Szybkość!","color":"red"}]
+tellraw @a ["",{"text":"  🌑 KRWAWY KSIĘŻYC! ","color":"dark_red","bold":true},{"text":"Potwory zyskują Siłę i Szybkość!","color":"red"}]
 tellraw @a ["",{"text":"═══════════════════════════════","color":"dark_red"}]
 
 # Sound effects

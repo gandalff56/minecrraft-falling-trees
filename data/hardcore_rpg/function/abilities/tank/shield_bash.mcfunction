@@ -1,11 +1,8 @@
-# Shield Bash: sneak + shield → AoE knockback + stun
-# Level 8+ Tank active ability
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon.offhand minecraft:shield run return 0
+# Shield Bash: AoE knockback + stun
+# Level 8+ Tank active ability (wand-activated)
 
 # Check cooldown (8 seconds = 160 ticks)
-execute unless score @s rpg.cd_shield_bash matches 0 run return 0
+execute unless score @s rpg.cd_shield_bash matches 0 run tellraw @s {"text":"Shield Bash na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_shield_bash 160

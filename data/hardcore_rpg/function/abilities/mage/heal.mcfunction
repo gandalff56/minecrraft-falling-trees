@@ -1,10 +1,7 @@
-# Heal: sneak + hold golden apple = heal self (+ nearby at L25+)
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon minecraft:golden_apple run return 0
+# Heal: heal self (+ nearby at L25+) (wand-activated)
 
 # Check cooldown (30 seconds = 600 ticks)
-execute unless score @s rpg.cd_heal matches 0 run return 0
+execute unless score @s rpg.cd_heal matches 0 run tellraw @s {"text":"Heal na cooldownie!","color":"red"} run return 0
 
 # Heal self: instant health + regen
 effect give @s minecraft:instant_health 1 1 true

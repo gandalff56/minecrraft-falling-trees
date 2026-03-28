@@ -1,10 +1,7 @@
-# Lightning: sneak + hold trident = lightning at look position
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon minecraft:trident run return 0
+# Lightning: lightning at look position (wand-activated)
 
 # Check cooldown (5 seconds = 100 ticks)
-execute unless score @s rpg.cd_lightning matches 0 run return 0
+execute unless score @s rpg.cd_lightning matches 0 run tellraw @s {"text":"Lightning na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_lightning 100

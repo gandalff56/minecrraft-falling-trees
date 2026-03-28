@@ -1,11 +1,8 @@
-# Arrow Rain: sneak + bow → rain of arrows on target area
-# Level 8+ Archer active ability
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon minecraft:bow run return 0
+# Arrow Rain: rain of arrows on target area
+# Level 8+ Archer active ability (wand-activated)
 
 # Check cooldown (15 seconds = 300 ticks)
-execute unless score @s rpg.cd_arrow_rain matches 0 run return 0
+execute unless score @s rpg.cd_arrow_rain matches 0 run tellraw @s {"text":"Arrow Rain na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_arrow_rain 300

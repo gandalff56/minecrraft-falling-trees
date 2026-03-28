@@ -1,6 +1,11 @@
 # Boss class-counter AI — called every 40 ticks for each mini-boss
 # Boss reacts differently based on nearest player's class
 
+# === SOLO TANK DETECTION — boss becomes unbeatable ===
+execute store result score @s rpg.temp run execute if entity @a[distance=..32,scores={rpg.class=1..3}]
+execute if score @s rpg.temp matches 0 if entity @a[distance=..32,scores={rpg.class=4}] run function hardcore_rpg:mobs/boss_solo_tank
+execute if score @s rpg.temp matches 0 if entity @a[distance=..32,scores={rpg.class=4}] run return 0
+
 # === vs WARRIOR (class 1) — maintain distance, apply Weakness ===
 # If warrior is within 4 blocks, boss teleports back 3-5 blocks and slows warrior
 execute if entity @p[distance=..4,scores={rpg.class=1}] run spreadplayers ~ ~ 3 5 false @s

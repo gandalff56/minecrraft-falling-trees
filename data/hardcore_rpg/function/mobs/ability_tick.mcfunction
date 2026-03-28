@@ -10,7 +10,7 @@ execute as @e[tag=hrpg.ability_invis,nbt={HurtTime:10s}] run effect give @s mine
 execute as @e[tag=hrpg.ability_invis,nbt={HurtTime:10s}] at @s run particle minecraft:poof ~ ~1 ~ 0.3 0.5 0.3 0.05 10
 
 # Reinforcer: when first hurt, summon ally (remove tag after summon)
-execute as @e[tag=hrpg.ability_reinforce,nbt={HurtTime:10s}] at @s run summon minecraft:zombie ~ ~ ~ {Tags:["hrpg.scaled","hrpg.elite_checked","hrpg.mature"],CustomName:'{"text":"Reinforcement","color":"gray","italic":true}'}
+execute as @e[tag=hrpg.ability_reinforce,nbt={HurtTime:10s}] at @s run summon minecraft:zombie ~ ~ ~ {Tags:["hrpg.scaled","hrpg.elite_checked","hrpg.mature"],CustomName:'{"text":"Posiłki","color":"gray","italic":true}'}
 execute as @e[tag=hrpg.ability_reinforce,nbt={HurtTime:10s}] at @s run particle minecraft:soul ~ ~1 ~ 0.5 0.5 0.5 0.05 10
 execute as @e[tag=hrpg.ability_reinforce,nbt={HurtTime:10s}] run tag @s remove hrpg.ability_reinforce
 

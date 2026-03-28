@@ -1,10 +1,7 @@
-# Teleport: sneak + hold ender pearl = blink forward 32 blocks
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon minecraft:ender_pearl run return 0
+# Teleport: blink forward 32 blocks (wand-activated)
 
 # Check cooldown (10 seconds = 200 ticks)
-execute unless score @s rpg.cd_teleport matches 0 run return 0
+execute unless score @s rpg.cd_teleport matches 0 run tellraw @s {"text":"Teleport na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_teleport 200

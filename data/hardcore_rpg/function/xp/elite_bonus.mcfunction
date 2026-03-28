@@ -7,4 +7,4 @@ execute store result score @s rpg.temp run scoreboard players get @s rpg.xp_gran
 scoreboard players operation @s rpg.temp *= #3 rpg.temp
 scoreboard players operation @s rpg.temp /= #2 rpg.temp
 scoreboard players operation @s rpg.xp_grant = @s rpg.temp
-tellraw @s ["",{"text":"★ ","color":"red"},{"text":"Elite kill! ","color":"red","bold":true},{"text":"XP x1.5","color":"yellow"}]
+tellraw @s ["",{"text":"★ ","color":"red"},{"text":"Zabito Elite! ","color":"red","bold":true},{"text":"XP x1.5","color":"yellow"}]

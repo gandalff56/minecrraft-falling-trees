@@ -1,10 +1,7 @@
-# Fireball: sneak + hold blaze rod
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon minecraft:blaze_rod run return 0
+# Fireball (wand-activated)
 
 # Check cooldown
-execute unless score @s rpg.cd_fireball matches 0 run return 0
+execute unless score @s rpg.cd_fireball matches 0 run tellraw @s {"text":"Fireball na cooldownie!","color":"red"} run return 0
 
 # Set cooldown: 2 seconds = 40 ticks
 scoreboard players set @s rpg.cd_fireball 40

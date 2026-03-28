@@ -1,11 +1,8 @@
-# Trap: sneak + string → slow enemies in area at target
-# Level 20+ Archer active ability
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-execute unless items entity @s weapon minecraft:string run return 0
+# Trap: slow enemies in area at target
+# Level 20+ Archer active ability (wand-activated)
 
 # Check cooldown (20 seconds = 400 ticks)
-execute unless score @s rpg.cd_trap matches 0 run return 0
+execute unless score @s rpg.cd_trap matches 0 run tellraw @s {"text":"Trap na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_trap 400

@@ -12,5 +12,5 @@ execute if score @s rpg.level matches 15..24 if predicate hardcore_rpg:dodge_cha
 execute if score @s rpg.level matches 25.. if predicate hardcore_rpg:dodge_chance_25 run effect give @s minecraft:instant_health 1 0 true
 
 # Effects
-execute if score @s rpg.level matches 15..24 if predicate hardcore_rpg:dodge_chance at @s run title @s actionbar {"text":"✧ Dodged!","color":"green"}
-execute if score @s rpg.level matches 25.. if predicate hardcore_rpg:dodge_chance_25 at @s run title @s actionbar {"text":"✧ Dodged!","color":"green"}
+execute if score @s rpg.level matches 15..24 if predicate hardcore_rpg:dodge_chance at @s run title @s actionbar {"text":"✧ Unik!","color":"green"}
+execute if score @s rpg.level matches 25.. if predicate hardcore_rpg:dodge_chance_25 at @s run title @s actionbar {"text":"✧ Unik!","color":"green"}

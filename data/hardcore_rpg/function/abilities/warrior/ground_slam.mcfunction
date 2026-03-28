@@ -1,13 +1,8 @@
-# Ground Slam: sneak + axe → AoE damage + slowness
-# Level 20+ Warrior active ability
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-
-# Check if holding any axe
-execute unless items entity @s weapon minecraft:wooden_axe run execute unless items entity @s weapon minecraft:stone_axe run execute unless items entity @s weapon minecraft:iron_axe run execute unless items entity @s weapon minecraft:golden_axe run execute unless items entity @s weapon minecraft:diamond_axe run execute unless items entity @s weapon minecraft:netherite_axe run return 0
+# Ground Slam: AoE damage + slowness
+# Level 20+ Warrior active ability (wand-activated)
 
 # Check cooldown (12 seconds = 240 ticks)
-execute unless score @s rpg.cd_ground_slam matches 0 run return 0
+execute unless score @s rpg.cd_ground_slam matches 0 run tellraw @s {"text":"Ground Slam na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_ground_slam 240

@@ -1,13 +1,8 @@
-# War Cry: sneak + sword → AoE knockback + weakness + damage
-# Level 8+ Warrior active ability
-
-execute unless entity @s[nbt={Pose:{Sneaking:1b}}] run return 0
-
-# Check if holding any sword (iron, diamond, netherite, etc.)
-execute unless items entity @s weapon minecraft:wooden_sword run execute unless items entity @s weapon minecraft:stone_sword run execute unless items entity @s weapon minecraft:iron_sword run execute unless items entity @s weapon minecraft:golden_sword run execute unless items entity @s weapon minecraft:diamond_sword run execute unless items entity @s weapon minecraft:netherite_sword run return 0
+# War Cry: AoE knockback + weakness + damage
+# Level 8+ Warrior active ability (wand-activated)
 
 # Check cooldown (10 seconds = 200 ticks)
-execute unless score @s rpg.cd_war_cry matches 0 run return 0
+execute unless score @s rpg.cd_war_cry matches 0 run tellraw @s {"text":"War Cry na cooldownie!","color":"red"} run return 0
 
 # Set cooldown
 scoreboard players set @s rpg.cd_war_cry 200
