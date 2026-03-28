@@ -1,8 +1,9 @@
-# Class Reset — costs 50% XP, requires L15+
+# Class Reset — costs 50% XP
 # Triggered via /trigger rpg.trigger set 10
 
-# Check level requirement
-execute unless score @s rpg.level matches 15.. run tellraw @s {"text":"Musisz mieć co najmniej poziom 15 aby zresetować klasę!","color":"red"} run return 0
+# Must have a class to reset
+execute unless score @s rpg.class matches 1..4 run tellraw @s {"text":"Nie masz jeszcze klasy!","color":"red"}
+execute unless score @s rpg.class matches 1..4 run return 0
 
 # Cost: 50% of current XP
 scoreboard players operation @s rpg.temp = @s rpg.xp
