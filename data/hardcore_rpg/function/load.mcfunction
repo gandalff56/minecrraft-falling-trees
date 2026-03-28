@@ -15,6 +15,8 @@ scoreboard objectives add rpg.health dummy
 scoreboard objectives add rpg.trigger trigger
 scoreboard objectives add rpg.temp dummy
 scoreboard objectives add rpg.xp_grant dummy
+scoreboard objectives add rpg.killrate dummy
+scoreboard objectives add rpg.mob_age dummy
 
 # Constants
 scoreboard players set #100 rpg.temp 100

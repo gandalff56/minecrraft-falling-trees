@@ -31,6 +31,15 @@ execute if score #rpg.craft_tick rpg.temp matches 20.. run scoreboard players se
 execute if score #rpg.craft_tick rpg.temp matches 0 run function hardcore_rpg:crafting/check
 scoreboard players add #rpg.craft_tick rpg.temp 1
 
+# Mob age tracking (every tick) — mobs need 8s (160 ticks) to give XP
+execute as @e[type=#hardcore_rpg:hostile_mobs,tag=!hrpg.mature] run scoreboard players add @s rpg.mob_age 1
+execute as @e[type=#hardcore_rpg:hostile_mobs,tag=!hrpg.mature,scores={rpg.mob_age=160..}] run tag @s add hrpg.mature
+
+# Kill rate reset (every 1200 ticks = 60 seconds)
+execute if score #rpg.killrate_tick rpg.temp matches 1200.. run scoreboard players set #rpg.killrate_tick rpg.temp 0
+execute if score #rpg.killrate_tick rpg.temp matches 0 as @a run scoreboard players set @s rpg.killrate 0
+scoreboard players add #rpg.killrate_tick rpg.temp 1
+
 # Mob scaling (every 40 ticks)
 execute if score #rpg.mob_tick rpg.temp matches 40.. run scoreboard players set #rpg.mob_tick rpg.temp 0
 execute if score #rpg.mob_tick rpg.temp matches 0 run function hardcore_rpg:mobs/scale

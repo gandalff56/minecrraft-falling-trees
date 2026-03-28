@@ -8,7 +8,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:witch"
+              "type": "minecraft:witch",
+              "nbt": "{Tags:[\"hrpg.mature\"]}"
             }
           }
         ]

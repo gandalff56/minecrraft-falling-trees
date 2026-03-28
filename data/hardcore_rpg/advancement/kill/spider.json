@@ -8,7 +8,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "minecraft:spider"
+              "type": "minecraft:spider",
+              "nbt": "{Tags:[\"hrpg.mature\"]}"
             }
           }
         ]

@@ -8,7 +8,8 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "type": "#hardcore_rpg:hostile_mobs"
+              "type": "#hardcore_rpg:hostile_mobs",
+              "nbt": "{Tags:[\"hrpg.mature\"]}"
             }
           }
         ]
