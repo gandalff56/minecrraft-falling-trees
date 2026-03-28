@@ -13,6 +13,5 @@ execute as @a[scores={rpg.level=..14}] run function hardcore_rpg:crafting/restri
 # Below L25: can't use netherite equipment
 execute as @a[scores={rpg.level=..24}] run function hardcore_rpg:crafting/restrict_netherite
 
-# Shields: only Warriors can use
-execute as @a[scores={rpg.class=0}] run function hardcore_rpg:crafting/restrict_shield
-execute as @a[scores={rpg.class=2..3}] run function hardcore_rpg:crafting/restrict_shield
+# Shields: only Tank (class 4) can use
+execute as @a[scores={rpg.class=0..3}] run function hardcore_rpg:crafting/restrict_shield

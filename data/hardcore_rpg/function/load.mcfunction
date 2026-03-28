@@ -20,6 +20,10 @@ scoreboard objectives add rpg.cd_trap dummy
 scoreboard objectives add rpg.cd_war_cry dummy
 scoreboard objectives add rpg.cd_ground_slam dummy
 scoreboard objectives add rpg.cd_shield dummy
+scoreboard objectives add rpg.cd_shield_bash dummy
+scoreboard objectives add rpg.cd_taunt dummy
+scoreboard objectives add rpg.cd_bulwark dummy
+scoreboard objectives add rpg.cd_unbreakable dummy
 scoreboard objectives add rpg.killrate dummy
 scoreboard objectives add rpg.mob_age dummy
 scoreboard objectives add rpg.elite_kill dummy

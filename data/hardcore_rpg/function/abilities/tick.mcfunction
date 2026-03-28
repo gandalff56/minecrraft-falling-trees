@@ -1,8 +1,5 @@
 # === WARRIOR ABILITIES ===
 
-# Shield: only warriors can block, nerfed with cooldown
-execute as @a[scores={rpg.class=1}] run function hardcore_rpg:abilities/warrior/shield_tick
-
 # Berserker: Strength when below 4 HP (level 5+)
 execute as @a[scores={rpg.class=1,rpg.level=5..}] run function hardcore_rpg:abilities/warrior/berserker
 
@@ -48,3 +45,26 @@ execute as @a[scores={rpg.class=3,rpg.level=15..}] at @s run function hardcore_r
 
 # Teleport: detect ender pearl use while sneaking (level 30+)
 execute as @a[scores={rpg.class=3,rpg.level=30..}] at @s run function hardcore_rpg:abilities/mage/teleport
+
+# === TANK ABILITIES ===
+
+# Shield: only tanks can block, nerfed with cooldown
+execute as @a[scores={rpg.class=4}] run function hardcore_rpg:abilities/warrior/shield_tick
+
+# Fortress: passive Resistance when below 50% HP (level 5+)
+execute as @a[scores={rpg.class=4,rpg.level=5..}] run function hardcore_rpg:abilities/tank/fortress
+
+# Shield Bash: sneak + shield → AoE knockback + stun (level 8+)
+execute as @a[scores={rpg.class=4,rpg.level=8..}] at @s run function hardcore_rpg:abilities/tank/shield_bash
+
+# Taunt: sneak + iron ingot → aggro mobs + Resistance (level 10+)
+execute as @a[scores={rpg.class=4,rpg.level=10..}] at @s run function hardcore_rpg:abilities/tank/taunt
+
+# Iron Skin: passive permanent Resistance I (level 15+)
+execute as @a[scores={rpg.class=4,rpg.level=15..}] run function hardcore_rpg:abilities/tank/iron_skin
+
+# Bulwark: sneak + shield while blocking → invulnerability (level 20+)
+execute as @a[scores={rpg.class=4,rpg.level=20..}] at @s run function hardcore_rpg:abilities/tank/bulwark
+
+# Unbreakable: survive lethal hit, 3 min cooldown (level 30)
+execute as @a[scores={rpg.class=4,rpg.level=30..}] run function hardcore_rpg:abilities/tank/unbreakable

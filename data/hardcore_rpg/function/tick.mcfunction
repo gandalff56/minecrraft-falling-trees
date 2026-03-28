@@ -6,13 +6,13 @@ execute as @a unless score @s rpg.level matches 0.. run function hardcore_rpg:pl
 execute as @a run scoreboard players enable @s rpg.trigger
 
 # Handle class selection trigger
-execute as @a[scores={rpg.trigger=1..3}] run function hardcore_rpg:class/select
+execute as @a[scores={rpg.trigger=1..4}] run function hardcore_rpg:class/select
 
 # Update health tracking
 execute as @a[scores={rpg.level=0..}] store result score @s rpg.health run data get entity @s Health 1
 
 # Tick abilities for classed players
-execute as @a[scores={rpg.class=1..3}] run function hardcore_rpg:abilities/tick
+execute as @a[scores={rpg.class=1..4}] run function hardcore_rpg:abilities/tick
 
 # Cooldown ticking
 execute as @a[scores={rpg.cd_heal=1..}] run scoreboard players remove @s rpg.cd_heal 1
@@ -25,6 +25,10 @@ execute as @a[scores={rpg.cd_trap=1..}] run scoreboard players remove @s rpg.cd_
 execute as @a[scores={rpg.cd_war_cry=1..}] run scoreboard players remove @s rpg.cd_war_cry 1
 execute as @a[scores={rpg.cd_ground_slam=1..}] run scoreboard players remove @s rpg.cd_ground_slam 1
 execute as @a[scores={rpg.cd_shield=1..}] run scoreboard players remove @s rpg.cd_shield 1
+execute as @a[scores={rpg.cd_shield_bash=1..}] run scoreboard players remove @s rpg.cd_shield_bash 1
+execute as @a[scores={rpg.cd_taunt=1..}] run scoreboard players remove @s rpg.cd_taunt 1
+execute as @a[scores={rpg.cd_bulwark=1..}] run scoreboard players remove @s rpg.cd_bulwark 1
+execute as @a[scores={rpg.cd_unbreakable=1..}] run scoreboard players remove @s rpg.cd_unbreakable 1
 
 # Actionbar UI (every 10 ticks)
 execute if score #rpg.ui_tick rpg.temp matches 10.. run scoreboard players set #rpg.ui_tick rpg.temp 0

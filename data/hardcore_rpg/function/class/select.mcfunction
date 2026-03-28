@@ -4,6 +4,7 @@
 execute as @s if score @s rpg.class matches 0 if score @s rpg.trigger matches 1 run function hardcore_rpg:class/warrior
 execute as @s if score @s rpg.class matches 0 if score @s rpg.trigger matches 2 run function hardcore_rpg:class/archer
 execute as @s if score @s rpg.class matches 0 if score @s rpg.trigger matches 3 run function hardcore_rpg:class/mage
+execute as @s if score @s rpg.class matches 0 if score @s rpg.trigger matches 4 run function hardcore_rpg:class/tank
 
 # Reset trigger
 scoreboard players set @s rpg.trigger 0

@@ -8,7 +8,7 @@ tellraw @s [{"text":"\n"},{"text":"★ LEVEL UP! ","color":"gold","bold":true},{
 execute if score @s rpg.level matches 1 if score @s rpg.class matches 0 run function hardcore_rpg:ui/class_menu
 
 # Update health for HP milestones
-execute if score @s rpg.class matches 1..3 run function hardcore_rpg:player/update_health
+execute if score @s rpg.class matches 1..4 run function hardcore_rpg:player/update_health
 
 # Notify new abilities
 execute if score @s rpg.class matches 1 if score @s rpg.level matches 5 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Berserker unlocked! ","color":"red"},{"text":"Strength I when below 2 hearts.","color":"gray"}]
@@ -29,3 +29,10 @@ execute if score @s rpg.class matches 3 if score @s rpg.level matches 5 run tell
 execute if score @s rpg.class matches 3 if score @s rpg.level matches 10 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Heal unlocked! ","color":"blue"},{"text":"Sneak + use golden apple to heal.","color":"gray"}]
 execute if score @s rpg.class matches 3 if score @s rpg.level matches 15 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Lightning unlocked! ","color":"blue"},{"text":"Sneak + use trident for lightning.","color":"gray"}]
 execute if score @s rpg.class matches 3 if score @s rpg.level matches 30 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Teleport unlocked! ","color":"blue"},{"text":"Sneak + use ender pearl to blink.","color":"gray"}]
+
+execute if score @s rpg.class matches 4 if score @s rpg.level matches 5 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Fortress unlocked! ","color":"dark_aqua"},{"text":"Resistance I when below 50% HP.","color":"gray"}]
+execute if score @s rpg.class matches 4 if score @s rpg.level matches 8 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Shield Bash unlocked! ","color":"dark_aqua"},{"text":"Kucnij + tarcza = AoE knockback + spowolnienie!","color":"gray"}]
+execute if score @s rpg.class matches 4 if score @s rpg.level matches 10 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Taunt unlocked! ","color":"dark_aqua"},{"text":"Kucnij + żelazo = agresja mobów + Resistance!","color":"gray"}]
+execute if score @s rpg.class matches 4 if score @s rpg.level matches 15 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Iron Skin unlocked! ","color":"dark_aqua"},{"text":"Permanent Resistance I.","color":"gray"}]
+execute if score @s rpg.class matches 4 if score @s rpg.level matches 20 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Bulwark unlocked! ","color":"dark_aqua"},{"text":"Kucnij + tarcza (blok) = 3s nieśmiertelności!","color":"gray"}]
+execute if score @s rpg.class matches 4 if score @s rpg.level matches 30 run tellraw @s [{"text":"  ★ ","color":"gold"},{"text":"Unbreakable unlocked! ","color":"dark_aqua"},{"text":"Przeżyj śmiertelny cios raz na 3 min.","color":"gray"}]
