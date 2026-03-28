@@ -29,3 +29,6 @@ execute as @a[scores={tpa.accept=1..}] run scoreboard players set @s tpa.accept 
 execute as @a[scores={tpa.timeout=1..}] run scoreboard players remove @s tpa.timeout 1
 execute as @a[scores={tpa.from=1..,tpa.timeout=0}] run tellraw @s [{"text":"[TPA] ","color":"red"},{"text":"Prosba o teleport wygasla.","color":"gray"}]
 execute as @a[scores={tpa.from=1..,tpa.timeout=0}] run scoreboard players set @s tpa.from 0
+
+# TPA cooldown countdown
+execute as @a[scores={tpa.cooldown=1..}] run scoreboard players remove @s tpa.cooldown 1
